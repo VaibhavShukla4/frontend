@@ -67,7 +67,7 @@ const AddUserData = () => {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      console.log(JSON.stringify(values, null, 2));
     },
   });
   const [personalDetails, setPersonalDetails] = useState({
@@ -164,6 +164,7 @@ const AddUserData = () => {
     });
     result = await result.json();
     navigate("/");
+    // console.log(result);
   };
 
   return (
