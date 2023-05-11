@@ -481,35 +481,4 @@ const AddUserData = () => {
   );
 };
 export default AddUserData;
-// const handleSubmit = async (e) => {
-//   e.preventDefault();
 
-//   let result = await fetch("http://localhost:5000/adduser-detail", {
-//     method: "post",
-//     body: JSON.stringify({
-//       name: personalDetails.name,
-//       age: personalDetails.age,
-//       sex: sexType,
-//       mobile: personalDetails.mobile,
-//       emergencyContact: contactDetails.emergencyContact,
-//       idType: govtIssueId,
-//       govtId: personalDetails.govtId,
-//       guardianName: contactDetails.guardiansName,
-//       guardianSex: guardianGender,
-//       email: contactDetails.email,
-//       address: addressDetails.address,
-//       state: selectedState.name,
-//       city: selectedCity.name,
-//       country: selectedCountry.name,
-//       pincode: addressDetails.pincode,
-//       occupation: otherDetails.occupation,
-//       religion: religion,
-//       maritalStatus: marital,
-//       bloodGroup: blood,
-//       nationality: otherDetails.nationality,
-//     }),
-//     headers: { "Content-Type": "application/json" },
-//   });
-//   result = await result.json();
-//   navigate("/");
-// };
