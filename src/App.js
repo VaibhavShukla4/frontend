@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import UserList from "./pages/UserList";
 import AddUser from "./pages/AddUser";

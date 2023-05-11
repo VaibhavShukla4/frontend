@@ -11,6 +11,39 @@ import { Country, State, City } from "country-state-city";
 import Select from "react-select";
 import "./index.css";
 import { useNavigate } from "react-router-dom";
+import { useFormik } from "formik";
+import * as yup from "yup";
+
+const validationSchema = yup.object().shape({
+  name: yup.string().required("Name is required"),
+  age: yup.number().required("Age is required"),
+  sex: yup.string().required("Sex is required"),
+  mobile: yup
+    .string()
+    .matches(
+      /^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/,
+      "Please enter a valid Indian mobile number"
+    ),
+  emergencyContact: yup
+    .string()
+    .matches(
+      /^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/,
+      "Please enter a valid Indian mobile number"
+    ),
+  idType: yup.string().required("ID Type is required"),
+  govtId: yup.string().when("idType", {
+    is: "Aadhar",
+    then: yup
+      .string()
+      .matches(/^\d{12}$/, "Govt Id should be a valid 12-digit numeric string"),
+    otherwise: yup
+      .string()
+      .matches(
+        /^[A-Za-z0-9]{10}$/,
+        "Govt Id should be a valid 10-digit alpha-numeric string"
+      ),
+  }),
+});
 const AddUserData = () => {
   const [sexType, setSexType] = useState(null);
   const [govtIssueId, setGovtIssueId] = useState(null);
@@ -21,6 +54,22 @@ const AddUserData = () => {
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [selectedState, setSelectedState] = useState(null);
   const [selectedCity, setSelectedCity] = useState(null);
+
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      age: "",
+      sex: "",
+      mobile: "",
+      emergencyContact: "",
+      idType: "",
+      govtId: "",
+    },
+    validationSchema: validationSchema,
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
   const [personalDetails, setPersonalDetails] = useState({
     name: "",
     age: "",
