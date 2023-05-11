@@ -1,0 +1,45 @@
+.css-b62m3t-container {
+  width: 200px;
+}
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.name {
+  width: 400px;
+  height: 25px;
+  border-radius: 5px;
+  background: #f5f5f5;
+}
+.age {
+  width: 250px;
+  height: 25px;
+  border-radius: 5px;
+  background: #f5f5f5;
+}
+label {
+  font-size: large;
+}
+.dropdown-large {
+  width: 200px;
+  height: 32px;
+  border-radius: 5px;
+  background: #f3f3f3;
+}
+.mobile {
+  width: 300px;
+  height: 25px;
+  border-radius: 5px;
+  background: #f5f5f5;
+}
+.css-b62m3t-container {
+  width: 330px !important;
+  position: relative;
+  box-sizing: border-box;
+}
+.css-13cymwt-control {
+  width: 330px !important;
+  height: 50px !important;
+}

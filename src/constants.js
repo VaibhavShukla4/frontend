@@ -5,7 +5,7 @@ export const SEX = {
 };
 export const GOVT_ISSUED_ID = {
   AADHAR: "Aadhar",
-  PAN: "Pan",
+  PAN: "PAN",
 };
 export const GUARDIAN_GENDER = {
   MALE: "Male",
