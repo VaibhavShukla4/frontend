@@ -351,7 +351,6 @@ const AddUserData = () => {
               id="city"
               name="city"
               className="css-b62m3t-container  css-16xfy0z-control"
-              // style={{ height: "50px" }}
               value={formik.values.city}
               onChange={(selectedOption) =>
                 formik.setFieldValue("city", selectedOption)
