@@ -1,11 +1,6 @@
 .css-b62m3t-container {
   width: 200px;
 }
-.row {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
 
 .name {
   width: 400px;
@@ -35,11 +30,16 @@ label {
   background: #f5f5f5;
 }
 .css-b62m3t-container {
-  width: 330px !important;
+  width: 100% !important;
+  height: 50px !important;
   position: relative;
   box-sizing: border-box;
 }
+.css-16xfy0z-control {
+  height: 50px;
+  width: 100%;
+}
 .css-13cymwt-control {
-  width: 330px !important;
-  height: 50px !important;
+  height: 50px;
+  width: 100%;
 }
