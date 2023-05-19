@@ -118,20 +118,22 @@ const AddUserData = () => {
   });
 
   return (
-    <section className="m-5">
+    <section className="container-xl ">
       <form onSubmit={formik.handleSubmit}>
         <div className="d-flex">
           <h2>Personal Details</h2>
         </div>
-        <div className="d-flex ">
-          <div className="form-group d-flex align-items-center w-50">
-            <label className="htmlFor mx-5 ">Name</label>
+        <div className="row">
+          <div className="col-lg-1 ">
+            <label className="">Name</label>
+          </div>
+          <div className="col-lg-3 ">
             <input
               type="text"
               id="name"
               name="name"
-              className="form-control"
-              style={{ width: "700px", height: "50px" }}
+              className=" form-control"
+              style={{ height: "50px" }}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.name}
@@ -140,14 +142,16 @@ const AddUserData = () => {
               <div>{formik.errors.name}</div>
             )}
           </div>
-          <div className="form-group d-flex align-items-center h-50 w-50">
-            <label className="htmlFor mx-5">Date of Birth or Age</label>
+          <div className="col-lg-2 ">
+            <label className="">Date of Birth or Age</label>
+          </div>
+          <div className="col-lg-3 ">
             <input
               type="number"
               id="age"
               name="age"
-              className="form-control"
-              style={{ width: "450px", height: "50px" }}
+              className="  form-control"
+              style={{ height: "50px" }}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.age}
@@ -156,13 +160,15 @@ const AddUserData = () => {
               <div>{formik.errors.age}</div>
             )}
           </div>
-          <div className="form-group d-flex align-items-center w-50">
-            <label className="htmlFor mx-5">Sex</label>
+          <div className="col-lg-1 ">
+            <label className=" ">Sex</label>
+          </div>
+          <div className="col-lg-2 ">
             <select
               id="sex"
               name="sex"
-              className="form-select w-50 "
-              style={{ width: "450px", height: "50px" }}
+              className="  form-select  "
+              style={{ height: "50px" }}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.sex}
@@ -177,15 +183,17 @@ const AddUserData = () => {
             )}
           </div>
         </div>
-        <div className="d-flex mt-5 ">
-          <div className="form-group d-flex  w-50 h-50 align-items-center">
-            <label className="htmlFor mx-5 ">Mobile</label>
+        <div className="row mt-5 ">
+          <div className="col-lg-1    ">
+            <label className="  ">Mobile</label>
+          </div>
+          <div className="col-lg-3 ">
             <input
               type="number"
               id="number"
               name="mobile"
               className="form-control"
-              style={{ width: "550px", height: "50px" }}
+              style={{ height: "50px" }}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.mobile}
@@ -194,13 +202,15 @@ const AddUserData = () => {
               <div>{formik.errors.mobile}</div>
             )}
           </div>
-          <div className="form-group d-flex align-items-center   h-100">
-            <label className="htmlFor mx-5 ">Govt Issued ID</label>
+          <div className="col-lg-2   ">
+            <label className="htmlFor  ">Govt Issued ID</label>
+          </div>
+          <div className="col-lg-2 ">
             <select
               id="idType"
               name="idType"
-              className="form-select w-50 "
-              style={{ height: "50px", width: "200px" }}
+              className="form-select "
+              style={{ height: "50px" }}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.idType}
@@ -212,12 +222,14 @@ const AddUserData = () => {
             {formik.touched.idType && formik.errors.idType && (
               <div>{formik.errors.idType}</div>
             )}
+          </div>
+          <div className="col-lg-4 ">
             <input
               id="age"
               type="text"
               className="form-control"
               name="govtId"
-              style={{ width: "440px", height: "50px" }}
+              style={{ height: "50px" }}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.govtId}
@@ -227,14 +239,16 @@ const AddUserData = () => {
         <div className="d-flex mt-4">
           <h2>Contact Details</h2>
         </div>
-        <div className="d-flex r">
-          <div className="form-group d-flex align-items-center  h-100">
-            <label className="htmlFor mx-4 ">Guardians Details</label>
+        <div className="row">
+          <div className="col-lg-1 ">
+            <label className="htmlFor  ">Guardians Details</label>
+          </div>
+          <div className="col-lg-1 ">
             <select
               id="guardianSex"
               name="guardianSex"
-              className="form-select w-50 "
-              style={{ width: "250px", height: "50px" }}
+              className=" form-select "
+              style={{ height: "50px" }}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.guardianSex}
@@ -244,38 +258,44 @@ const AddUserData = () => {
               <option value={GUARDIAN_GENDER.FEMALE}>Female</option>
               <option value={GUARDIAN_GENDER.OTHER}>Other</option>
             </select>
+          </div>
+          <div className="col-lg-3 ">
             <input
               id="age"
               type="text"
               name="guardianName"
               className="form-control"
-              style={{ width: "350px", height: "50px" }}
+              style={{ height: "50px" }}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.guardianName}
             />
           </div>
-          <div className="form-group d-flex align-items-center w-50">
-            <label className=" mx-5">Email</label>
+          <div className="col-lg-1  ">
+            <label className="">Email</label>
+          </div>
+          <div className="col-lg-3 ">
             <input
               id="age"
               type="email"
               name="email"
               className="form-control"
-              style={{ width: "340px", height: "50px" }}
+              style={{ height: "50px" }}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.email}
             />
           </div>
-          <div className="form-group d-flex align-items-center w-50">
+          <div className="col-lg-1 ">
             <label className=" ">Emergency Contact Number</label>
+          </div>
+          <div className="col-lg-2 ">
             <input
               id="tel"
               type="tel"
               name="emergencyContact"
               className="form-control"
-              style={{ width: "300px", height: "50px" }}
+              style={{ height: "50px" }}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.emergencyContact}
@@ -285,26 +305,30 @@ const AddUserData = () => {
         <div className="d-flex mt-4">
           <h2>Address Details</h2>
         </div>
-        <div className="d-flex">
-          <div className="form-group d-flex align-items-center  h-100">
-            <label className="htmlFor mx-5 ">Address</label>
+        <div className="row">
+          <div className="col-lg-1 ">
+            <label className="htmlFor ">Address</label>
+          </div>
+          <div className="col-lg-3 ">
             <input
               id="address"
               type="text"
               name="address"
               className="form-control"
-              style={{ width: "650px", height: "50px" }}
+              style={{ height: "50px" }}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.address}
             />
           </div>
-          <div className="form-group d-flex align-items-center w-50">
+          <div className="col-lg-1 ">
             <label className=" mx-5">State</label>
+          </div>
+          <div className="col-lg-3 ">
             <Select
               id="state"
               name="state"
-              className="css-b62m3t-container"
+              className="css-b62m3t-container  css-16xfy0z-control"
               value={formik.values.state}
               onChange={(selectedOption) =>
                 formik.setFieldValue("state", selectedOption)
@@ -319,13 +343,15 @@ const AddUserData = () => {
               isDisabled={!formik.values.country}
             />
           </div>
-          <div className="form-group d-flex align-items-center w-50">
-            <label className=" mx-5">City</label>
+          <div className="col-lg-1 ">
+            <label className="">City</label>
+          </div>
+          <div className="col-lg-3 ">
             <Select
               id="city"
               name="city"
-              className="css-b62m3t-container"
-              style={{ width: "200px" }}
+              className="css-b62m3t-container  css-16xfy0z-control"
+              // style={{ height: "50px" }}
               value={formik.values.city}
               onChange={(selectedOption) =>
                 formik.setFieldValue("city", selectedOption)
@@ -341,13 +367,15 @@ const AddUserData = () => {
             />
           </div>
         </div>
-        <div className="d-flex mt-5">
-          <div className="form-group d-flex align-items-center  w-50 h-50">
-            <label className="htmlFor mx-5 ">Country</label>
+        <div className="row mt-5">
+          <div className="col-lg-1 ">
+            <label className="htmlFor  ">Country</label>
+          </div>
+          <div className="col-lg-3 ">
             <Select
               id="country"
               name="country"
-              className="css-b62m3t-container   "
+              className="css-b62m3t-container .css-13cymwt-control  "
               value={formik.values.country}
               onChange={(selectedOption) =>
                 formik.setFieldValue("country", selectedOption)
@@ -359,8 +387,10 @@ const AddUserData = () => {
               }))}
             />
           </div>
-          <div className="form-group d-flex align-items-center  h-100">
-            <label className="htmlFor mx-5 ">Pincode</label>
+          <div className="col-lg-1 ">
+            <label className="htmlFor  ">Pincode</label>
+          </div>
+          <div className="col-lg-3 ">
             <input
               id="pincode"
               type="number"
@@ -372,31 +402,36 @@ const AddUserData = () => {
               value={formik.values.pincode}
             />
           </div>
+          <div className="col-lg-4 "></div>
         </div>
         <div className="d-flex mt-4">
           <h2>Other Details</h2>
         </div>
-        <div className="d-flex">
-          <div className="form-group d-flex align-items-center  h-100">
-            <label className="htmlFor mx-5 ">Occupation </label>
+        <div className="row">
+          <div className="col-lg-1 ">
+            <label className="htmlFor">Occupation </label>
+          </div>
+          <div className="col-lg-2 ">
             <input
               id="occupation"
               type="text"
               name="occupation"
               className="form-control"
-              style={{ width: "300px", height: "50px" }}
+              style={{ height: "50px" }}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.occupation}
             />
           </div>
-          <div className="form-group d-flex align-items-center w-50">
-            <label className=" mx-5">Religion</label>
+          <div className="col-lg-1 ">
+            <label className=" ">Religion</label>
+          </div>
+          <div className="col-lg-2 ">
             <select
               id="religion"
               name="religion"
-              className="form-select w-50 "
-              style={{ width: "300px", height: "50px" }}
+              className="form-select  "
+              style={{ height: "50px" }}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.religion}
@@ -411,13 +446,15 @@ const AddUserData = () => {
               <option value={RELIGION.OTHER}>Other</option>
             </select>
           </div>
-          <div className="form-group d-flex align-items-center w-50">
-            <label className=" mx-5">Marital Status</label>
+          <div className="col-lg-2 ">
+            <label className=" ">Marital Status</label>
+          </div>
+          <div className="col-lg-2 ">
             <select
               id="maritalStatus"
               name="maritalStatus"
-              className="form-select w-50 "
-              style={{ width: "300px", height: "50px" }}
+              className="form-select "
+              style={{ height: "50px" }}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.maritalStatus}
@@ -429,13 +466,15 @@ const AddUserData = () => {
               <option value={MARITAL_STATUS.SEPARATED}>Separated</option>
             </select>
           </div>
-          <div className="form-group d-flex align-items-center w-50 h-50">
-            <label className="htmlFor mx-5 ">Blood Group</label>
+          <div className="col-lg-1 ">
+            <label className="htmlFor  ">Blood Group</label>
+          </div>
+          <div className="col-lg-1 ">
             <select
               id="bloodGroup"
               name="bloodGroup"
-              className="form-select w-50 "
-              style={{ width: "180px", height: "50px" }}
+              className="form-select  "
+              style={{ height: "50px" }}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.bloodGroup}
@@ -452,9 +491,11 @@ const AddUserData = () => {
             </select>
           </div>
         </div>
-        <div className="d-flex mt-5">
-          <div className="form-group d-flex align-items-center  h-100">
-            <label className="htmlFor mx-5 ">Nationality</label>
+        <div className="row mt-5">
+          <div className=" col-lg-1 ">
+            <label className="htmlFor  ">Nationality</label>
+          </div>
+          <div className="col-lg-3 ">
             <input
               id="nationality"
               type="text"
@@ -466,6 +507,7 @@ const AddUserData = () => {
               value={formik.values.nationality}
             />
           </div>
+          <div className="col-lg- "></div>
         </div>
         <div className="d-flex justify-content-end ">
           <button type="button" className="btn btn-outline-danger px-5 py-3">
@@ -481,4 +523,3 @@ const AddUserData = () => {
   );
 };
 export default AddUserData;
-
